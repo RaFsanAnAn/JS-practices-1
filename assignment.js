@@ -25,12 +25,14 @@ function woodCalculator(chair, table, bed) {
         return totalWood;
     }
 }
-var result2 = woodCalculator(100, 100, 100);
+var result2 = woodCalculator(200, 100, 100);
 console.log("Total wood needed :", result2, "cubic feet");
 
 
 // brickCalculator
 function brickCalculator(floors) {
+    var firstTenFloors = (10 * 15) * 1000;
+    var secondTenFloors = (10 * 12) * 1000;
     if (floors < 1) {
         return "Error! Number of floors cannot be negative.";
     }
@@ -39,20 +41,17 @@ function brickCalculator(floors) {
         return totalBricks;
     }
     else if (floors > 10 && floors <= 20) {
-        var firstTenFloors = (10 * 15) * 1000;
         var restFloors = ((floors - 10) * 12) * 1000;
         var totalBricks = firstTenFloors + restFloors;
         return totalBricks;
     }
     else {
-        var firstTenFloors = (10 * 15) * 1000;
-        var secondTenFloors = (10 * 12) * 1000;
         var restFloors = ((floors - 20) * 10) * 1000;
         var totalBricks = firstTenFloors + secondTenFloors + restFloors;
         return totalBricks;
     }
 }
-var result3 = brickCalculator(50);
+var result3 = brickCalculator(35);
 console.log(result3, "bricks are needed");
 
 
@@ -72,5 +71,5 @@ function tinyFriend(friends) {
         return "Input cannot be empty!";
     }
 }
-var result4 = tinyFriend(['Abul', 'Saleka', 'Kulsum', 'Rahim', 'Jorina']);
+var result4 = tinyFriend(['Abul', 'Saleka', 'Kulsum','Gab','Rahim', 'Jorina']);
 console.log("Tiny friend is:", result4);
